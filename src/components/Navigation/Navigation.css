@@ -1,0 +1,54 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #334;
+    color: white;
+}
+
+.brandTitle{
+    font-size: 1.5rem;
+    margin: 0.7rem;
+}
+
+.navbarLinks ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbarLinks li {
+    list-style: none;
+}
+
+.navbarLinks li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbarLinks li a:hover{
+    background: lightsalmon;
+}
+
+@media (max-width: 576px){
+    .navbar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbarLinks ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbarLinks li a{
+        display:inline-block;
+        width: 100%;
+    }
+    .navbarLinks li a:hover{
+        background: white;
+        color: black;
+    }
+}
