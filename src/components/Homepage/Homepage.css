@@ -7,3 +7,23 @@
     height: 100vh;
     
 }
+
+.cardShowcase{
+    margin-top: 12rem;
+}
+
+@media (max-width: 576px){
+    .cardShowcase{
+        margin-top: 3rem;
+        padding-bottom: 6rem;
+    }
+    .home{
+        background-image: url(./../../Images/Bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 100%;
+        
+    }
+}

@@ -1,12 +1,12 @@
 import './App.css';
 import Homepage from './components/Homepage/Homepage';
-import Navigation from './components/Navigation/Navigation';
+import SignInForm from './components/SignInForm/SignInForm';
 
 
 function App() {
   return (
     <div className="App">
-      <Navigation></Navigation>
+      <SignInForm></SignInForm>
       {/* <Homepage></Homepage> */}
     </div>
   );

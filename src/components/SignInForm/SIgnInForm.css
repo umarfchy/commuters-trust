@@ -1,0 +1,36 @@
+#signInForm{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: .1rem solid lightgray;
+    height: 15rem;
+    width: 20rem;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#signInForm input{
+    margin: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    width: 18rem;
+}
+
+#signInEmail, #signInPass {
+    border: none;
+    border-bottom: .1rem solid lightgray;
+}
+
+#signInEmail:focus, #signInPass:focus, #signInSubmit:focus{
+    outline: none;
+}
+
+#signInSubmit{
+    width: 100%;
+    background: #FF6E40;
+    color: white;
+    border: .12rem solid lightgray;
+}

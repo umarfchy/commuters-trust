@@ -9,9 +9,10 @@ const Navigation = () => {
             <div className='navbarLinks'>
                 <ul>
                     <li><a href="Home">Home</a></li>
-                    <li><a href="">Destination</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="Destination">Destination</a></li>
+                    <li><a href="Blog">Blog</a></li>
+                    <li><a href="Contact">Contact</a></li>
+                    <li><a href="Login">Login</a></li>
                 </ul>
             </div>
         </nav>

@@ -18,10 +18,10 @@ const OptionCard = () => {
 
     return (
         <div className='cards'>
-            <>{card('bike', rideImg1)}</>
-            <>{card('car', rideImg2)}</>
-            <>{card('bus', rideImg3)}</>
-            <>{card('train', rideImg4)}</>
+            <>{card('Bike', rideImg1)}</>
+            <>{card('Car', rideImg2)}</>
+            <>{card('Bus', rideImg3)}</>
+            <>{card('Train', rideImg4)}</>
         </div>
     );
 };
