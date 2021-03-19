@@ -1,0 +1,9 @@
+.home{
+    background-image: url(./../../Images/Bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    
+}
