@@ -1,51 +1,36 @@
-#signInForm{    
+#signUpForm{    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: .1rem solid lightgray;
-    height: 22rem;
-    width: 22rem;
-    margin-top: 8rem;
+    height: 27rem;
+    width: 23rem;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
 
 }
 
-#signInForm > input{
+#signUpForm input{
     margin: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.3rem;
     width: 18rem;
 }
 
-#signInEmail, #signInPass {
+#signUpName, #signUpEmail, #signUpPass1, #signUpPass2 {
     border: none;
     border-bottom: .1rem solid lightgray;
 }
 
-#signInEmail:focus, #signInPass:focus, #signInSubmit:focus{
+#signUpName:focus, #signUpEmail:focus, #signUpPass1:focus, #signUpPass2:focus, #signUpSubmit:focus{
     outline: none;
 }
 
-#signInSubmit{
+#signUpSubmit{
     width: 100%;
     background: #FF6E40;
     color: white;
     border: .12rem solid lightgray;
-}
-
-#signInFormBottom{
-    font-size: 0.8rem;
-    margin: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.3rem;
-    width: 18rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#rememberMe{
-    padding: 0.3rem;
 }
