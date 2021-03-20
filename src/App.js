@@ -6,7 +6,9 @@ import LocationSelector from './components/LocationSelector/LocationSelector'
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config'
-import { useState } from 'react';
+import { createContext, useContext, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navigation from './components/Navigation/Navigation';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -27,8 +29,7 @@ function App() {
         const newUser = {
           isSignedIn: true,  
           name: name,
-          email: email,
-          picture: picture
+          email: email
         }
         setUser(newUser)
       }).catch((error) => {
@@ -41,8 +42,7 @@ function App() {
       const signedOutUser = {
         isSignedIn: false,  
         name: '',
-        email: '',
-        picture: ''
+        email: ''
 }
 
       setUser(signedOutUser);
@@ -52,21 +52,34 @@ function App() {
     });
   }
 
-   
+  const UserContext = createContext();
   return (
     <div className="App">
-      {user.isSignedIn ?
+      {/* {user.isSignedIn ?
       <div>
         <h3> Name: { user.name} </h3>
         <p> Email: {user.email} </p>
-        <img src={user.picture} alt=""/>
         <button onClick={handleSignOut}> Sign out </button>
       </div> :
        <button onClick={handleSignIn}>
        Sign In
-     </button> }
-
-     <SignUpForm></SignUpForm>
+     </button> } */}
+      
+    {/* <UserContext.Provider> */}
+     <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Homepage></Homepage>
+          </Route>
+          <Route path='/random'>
+          <Navigation></Navigation>
+          <SignInForm></SignInForm>
+          </Route>
+          <Route path='/*'>
+          </Route>
+        </Switch>
+      </Router>
+      {/* </UserContext.Provider> */}
     </div>
   );
 }

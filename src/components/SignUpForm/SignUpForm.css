@@ -18,6 +18,9 @@
     padding-bottom: 0.3rem;
     width: 18rem;
 }
+#signUpForm > p{
+    text-align: center;
+}
 
 #signUpName, #signUpEmail, #signUpPass1, #signUpPass2 {
     border: none;
