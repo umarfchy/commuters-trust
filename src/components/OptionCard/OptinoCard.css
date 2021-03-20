@@ -22,6 +22,7 @@
     box-shadow: 0.08rem  0.1rem gray;
     width: 13rem;
     height: 14rem;
+    cursor: pointer;
 }
 
 .cards{

@@ -4,12 +4,18 @@ import rideImg1 from './../../Images/Frame-1.png'
 import rideImg2 from './../../Images/Frame-2.png'
 import rideImg3 from './../../Images/Frame-3.png'
 import rideImg4 from './../../Images/Frame-4.png'
+import { useHistory } from 'react-router';
 
 const OptionCard = () => {
+    const history = useHistory();   
+
+    const handleClickRide = ()=>{
+        history.push('/location')
+    }
 
     const card = (rideType, rideImg) =>{
         return(
-            <div className='card'>
+            <div onClick = {handleClickRide} className='card'>
             <img src={rideImg} alt=""/>
             <h3>{rideType}</h3>
             </div>
