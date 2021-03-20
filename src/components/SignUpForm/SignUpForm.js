@@ -1,4 +1,5 @@
 import React from 'react';
+import SignUpFirebase from '../SignUpFirebase/SignUpFirebase';
 import './SignUpForm.css'
 
 const SignUpForm = () => {
@@ -12,6 +13,7 @@ const SignUpForm = () => {
                 <input type="password" name="password2" placeholder='Re-type Password' id="signUpPass2"/>
                 <input type="submit" name="submit" id="signUpSubmit"/>
             </form>
+            <SignUpFirebase></SignUpFirebase>
         </div>
     );
 };
