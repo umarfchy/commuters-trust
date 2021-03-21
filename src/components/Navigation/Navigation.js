@@ -1,18 +1,24 @@
 import './Navigation.css'
 
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../App';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
+    const [user, setUser] = useContext(UserContext);
+
     return (
         <nav className='navbar'>
             <div className='brandTitle'>Commuter's Trust</div>
             <div className='navbarLinks'>
                 <ul>
-                    <li><a href="Home">Home</a></li>
-                    <li><a href="Destination">Destination</a></li>
-                    <li><a href="Blog">Blog</a></li>
-                    <li><a href="Contact">Contact</a></li>
-                    <li><a href="Login">Login</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="#">Destination</Link></li>
+                    <li><Link to="#">Blog</Link></li>
+                    <li><Link to="#">Contact</Link></li>
+                    <li><Link to="signin">{
+                        user.name ?  user.name : 'Login'
+                    }</Link></li>
                 </ul>
             </div>
         </nav>

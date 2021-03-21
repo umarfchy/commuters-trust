@@ -5,6 +5,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './../../firebase.config'
 import { UserContext } from '../../App';
+import { useHistory, useLocation } from 'react-router';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -19,6 +20,9 @@ const SignUpFirebase = () => {
     // })
 
     const [user, setUser] = useContext(UserContext);
+    const history = useHistory();
+    const location = useLocation();
+    let { from } = location.state || { from: { pathname: "/" } };
 
     const handleSignIn = () => {
         firebase.auth()
@@ -31,6 +35,7 @@ const SignUpFirebase = () => {
             email: email
             }
             setUser(newUser)
+            history.replace(from)
         }).catch((error) => {
             console.log('This is the log of error:\n\n' + error);
         });

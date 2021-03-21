@@ -7,6 +7,7 @@ import { createContext, useContext, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from './components/Navigation/Navigation';
 import SignUpFirebase from './components/SignUpFirebase/SignUpFirebase';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -27,9 +28,9 @@ function App() {
           <Route path='/signin'>
           <SignUpFirebase></SignUpFirebase>
           </Route>
-          <Route path='/location'>
+          <PrivateRoute path='/location'>
             <LocationSelector></LocationSelector>
-          </Route>
+          </PrivateRoute>
           <Route path='/*'>
           </Route>
         </Switch>
