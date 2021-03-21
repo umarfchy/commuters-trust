@@ -6,7 +6,7 @@
     border: .1rem solid lightgray;
     height: 27rem;
     width: 23rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-left: auto;
     margin-right: auto;
 
@@ -36,5 +36,6 @@
     background: #FF6E40;
     color: white;
     border: .12rem solid lightgray;
+    cursor: pointer;
 }
 

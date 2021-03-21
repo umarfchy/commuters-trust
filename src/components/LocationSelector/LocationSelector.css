@@ -1,0 +1,67 @@
+.hideDisplayArea{
+    display: none;
+}
+
+.displayArea{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+.searchArea{
+    border: 0.1rem solid lightgray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    padding: 1rem;
+}
+
+.searchArea > *{
+    margin-top: 1.5rem;
+    font-size: medium;
+}
+
+#formCustomBtn {
+    width: 100%;
+    background: #FF6E40;
+    color: white;
+    border: .12rem solid lightgray;
+    border-radius: 0.15rem;
+    cursor: pointer;
+}
+
+.searchArea > input{
+    width: 100%;
+}
+
+.mapArea{
+    background: url(./../../Images/Map.png);
+    border-radius: 1rem;
+    border: 0.15rem solid lightgray;
+    height: 80vh;
+    width: 60vw;
+}
+
+.availableOption{
+    width: 100%;
+    border-radius: 0.3rem;
+    background: rgba(255, 160, 122, 0.705);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.imageOption1{
+    width:4rem;
+    padding: 0.5rem;
+}
+.imageOption2{
+    width:2rem;
+    padding: 0.5rem;
+}
+
+.availableOptionContainer > * {
+    margin-top: 1rem;
+}

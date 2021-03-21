@@ -15,20 +15,27 @@ export const UserContext = createContext();
 
 function App() {
   const [user, setUser] = useState({});
-
+  const [ride, setRide] = useState('');
 
   return (
     <div className="App">      
-    <UserContext.Provider value= {[user, setUser]}>
+    <UserContext.Provider value= {[user, setUser, ride, setRide]}>
      <Router>
         <Switch>
           <Route exact path='/'>
+            <Navigation></Navigation>
             <Homepage></Homepage>
           </Route>
+          <Route path='/signup'>
+            <SignUpForm></SignUpForm>
+            <SignUpFirebase></SignUpFirebase>
+          </Route>
           <Route path='/signin'>
+          <SignInForm></SignInForm>
           <SignUpFirebase></SignUpFirebase>
           </Route>
           <PrivateRoute path='/location'>
+            <Navigation></Navigation>
             <LocationSelector></LocationSelector>
           </PrivateRoute>
           <Route path='/*'>
