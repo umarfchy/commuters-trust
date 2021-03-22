@@ -5,25 +5,28 @@ import SignUpForm from './components/SignUpForm/SignUpForm';
 import LocationSelector from './components/LocationSelector/LocationSelector'
 import { createContext, useContext, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navigation from './components/Navigation/Navigation';
 import SignUpFirebase from './components/SignUpFirebase/SignUpFirebase';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
-
-
+export const RidereContext = createContext();
 
 function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({
+    isSignedIn: false,
+    name:'',
+    email:'',
+    password:''
+});
   const [ride, setRide] = useState('');
 
   return (
     <div className="App">      
-    <UserContext.Provider value= {[user, setUser, ride, setRide]}>
+    <UserContext.Provider value= {[user, setUser]}>
+    <RidereContext.Provider value = {[ride, setRide]}>
      <Router>
         <Switch>
           <Route exact path='/'>
-            <Navigation></Navigation>
             <Homepage></Homepage>
           </Route>
           <Route path='/signup'>
@@ -35,13 +38,13 @@ function App() {
           <SignUpFirebase></SignUpFirebase>
           </Route>
           <PrivateRoute path='/location'>
-            <Navigation></Navigation>
             <LocationSelector></LocationSelector>
           </PrivateRoute>
           <Route path='/*'>
           </Route>
         </Switch>
       </Router>
+      </RidereContext.Provider>
       </UserContext.Provider>
     </div>
   );

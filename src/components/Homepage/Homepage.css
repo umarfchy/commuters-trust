@@ -2,12 +2,61 @@
     background-image: url(./../../Images/Bg.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;     
+    background-size: cover;
+    height: 100vh;     
 }
 
 .cardShowcase{
     margin-top: 12rem;
 }
+
+
+.card img{
+    height: 8rem;
+    width: 8rem;
+    display: flex;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h3{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card{
+    background-color: white;
+    border: 0.1rem solid lightgray;
+    border-radius: .5rem;
+    box-shadow: 0.08rem  0.1rem gray;
+    width: 13rem;
+    height: 14rem;
+    cursor: pointer;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 576px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        margin-top: 1rem;
+    }
+
+}
+
 
 @media (max-width: 576px){
     .cardShowcase{

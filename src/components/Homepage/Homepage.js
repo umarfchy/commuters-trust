@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../App';
+import { RidereContext, UserContext } from '../../App';
 import Navigation from '../Navigation/Navigation';
 import OptionCard from './../OptionCard/OptionCard'
 import rideImg1 from './../../Images/Frame-1.png'
@@ -10,7 +10,8 @@ import './Homepage.css'
 import { useHistory } from 'react-router';
 
 const Homepage = () => {
-    const [ride, setRide] = useContext(UserContext);
+    const [user, setUser] = useContext(UserContext);
+    const [ride, setRide] = useContext(RidereContext);
     const history = useHistory();
 
     const handleClickRide1 = ()=>{
@@ -46,6 +47,7 @@ const Homepage = () => {
 
     return (
         <div className = 'home'>
+            <Navigation loggedUserName = {user.name}></Navigation>
             <div className='cardShowcase'>
             <div className='cards'>
                     <>{card('Bike', rideImg1, handleClickRide1)}</>

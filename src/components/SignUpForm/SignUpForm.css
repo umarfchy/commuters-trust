@@ -22,12 +22,12 @@
     text-align: center;
 }
 
-#signUpName, #signUpEmail, #signUpPass1, #signUpPass2 {
+#signUpName, #signUpEmail, #signUpPass {
     border: none;
     border-bottom: .1rem solid lightgray;
 }
 
-#signUpName:focus, #signUpEmail:focus, #signUpPass1:focus, #signUpPass2:focus, #signUpSubmit:focus{
+#signUpName:focus, #signUpEmail:focus, #signUpPass:focus, #signUpSubmit:focus{
     outline: none;
 }
 

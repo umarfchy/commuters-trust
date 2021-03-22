@@ -33,6 +33,7 @@
     background: #FF6E40;
     color: white;
     border: .12rem solid lightgray;
+    cursor: pointer;
 }
 
 #signInFormBottom{

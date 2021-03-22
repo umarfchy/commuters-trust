@@ -6,12 +6,14 @@ import rideImg1 from './../../Images/Frame-1.png'
 import rideImg2 from './../../Images/Frame-2.png'
 import rideImg3 from './../../Images/Frame-3.png'
 import rideImg4 from './../../Images/Frame-4.png'
-import { UserContext } from '../../App';
+import { RidereContext, UserContext } from '../../App';
+import Navigation from '../Navigation/Navigation';
 
 
 
 const LocationSelector = () => {
-    const [ride, setRide] = useContext(UserContext);
+    const [user, setUser] = useContext(UserContext);
+    const [ride, setRide] = useContext(RidereContext);
     let placeHolderImg;
 
     if (ride === 'bike'){
@@ -61,10 +63,11 @@ const LocationSelector = () => {
         }
     return (
         <div>
+            <Navigation loggedUserName = {user.name}></Navigation>
             <div className='displayArea'>
                 {visible ? 
                 <div className='searchArea'>
-                    <p>You can travel from {locatorObj.from} to {locatorObj.to} on following options - </p>
+                    <p>You can travel from <strong>{locatorObj.from}</strong> to <strong>{locatorObj.to}</strong> on following options - </p>
                    <div className = 'availableOptionContainer'>
                     <>{optionShower(placeHolderImg, ride)}</>
                     <>{optionShower(placeHolderImg, ride)}</>
@@ -81,7 +84,6 @@ const LocationSelector = () => {
 
                 </div>
             </div>
-            <Link to='/'> Home</Link>
         </div>
     );
 };

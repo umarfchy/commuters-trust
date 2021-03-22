@@ -12,7 +12,7 @@ export const handleGoogleLogin = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(provider)
         .then((result) => {
-            const { name, email, picture } = result.additionalUserInfo.profile;
+            const { name, email } = result.additionalUserInfo.profile;
             const newUser = {
                 isSignedIn: true,
                 name: name,
@@ -24,24 +24,52 @@ export const handleGoogleLogin = () => {
         });
 }
 
-export const handleEmailSignUp = (email, password) => {
-        return firebase.auth().createUserWithEmailAndPassword(email, password)
+export const handleEmailSignUp = (name, email, password) => {
+    return firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            return userCredential;
+            updateUserName(name);
+            const newUser = {
+                isSignedIn: true,
+                name: name,
+                email: email
+            }
+            return newUser;
         })
         .catch((error) => {
-            console.log('Error during saving credential: ', error);
+            const errorMessage = error.message;
+            return errorMessage;
         });
 }
 
-export const handleEmailLogin = (email, password)=>{
+const updateUserName = name => {
+    const user = firebase.auth().currentUser;
+
+    user.updateProfile({
+        displayName: name, 
+    }).then( () => {
+        // Update successful.
+        console.log('Username updated successfully');
+    }).catch((error) => {
+        // An error happened.
+        console.log(error);
+    });
+}
+
+
+export const handleEmailLogin = (email, password) => {
     return firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    return userCredential;
-  })
-  .catch((error) => {
-      console.log(error);
-  });
+        .then((userCredential) => {
+            const newUser = {
+                isSignedIn: true,
+                name: userCredential.user.displayName,
+                email: userCredential.user.email
+            }
+            return newUser;
+        })
+        .catch((error) => {
+            const errorMessage = error.message;
+            return errorMessage;
+        });
 }
 
 

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
 import './SignUpFirebase.css'
 import googleIcon from './../../Images/google_logo.svg'
 import { UserContext } from '../../App';
@@ -21,11 +21,6 @@ const SignUpFirebase = () => {
             history.replace(from)
         })
     }
-
-    // const logOut = ()=>{
-    //     handleSignOut()
-    //     .then(res => setUser(res))
-    // }
 
     return (
         <div>
