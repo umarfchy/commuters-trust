@@ -65,3 +65,26 @@
 .availableOptionContainer > * {
     margin-top: 1rem;
 }
+
+@media (max-width: 576px){
+    .displayArea{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .searchArea{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mapArea{
+        margin-top: 2rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 20rem;
+        
+    }
+}
