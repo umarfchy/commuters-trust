@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 import './LocationSelector.css'
 import peopleImg from './../../Images/peopleicon.png'
 import rideImg1 from './../../Images/Frame-1.png'

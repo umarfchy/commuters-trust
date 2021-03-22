@@ -59,9 +59,7 @@ const SignUpForm = () => {
     }
 
     const handleSubmit = (e) => {
-        debugger;
         if (localUser.name && localUser.email && localUser.password) {
-            debugger;
             // sign up function sends data to firebase
             handleEmailSignUp(localUser.name, localUser.email, localUser.password)
                 .then(res => {
@@ -72,14 +70,12 @@ const SignUpForm = () => {
                     console.log(err);
                 })
         }
-        debugger;
         e.preventDefault();
     }
 
     // conditional redirection of the page
     const handleResponse = (res, redirect) => {
-        // setUser(res);
-        console.log('user on redirecting the url', user);
+        setUser(res);
         if (redirect) {
             history.replace(from);
         }

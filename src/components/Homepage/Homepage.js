@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { RidereContext, UserContext } from '../../App';
 import Navigation from '../Navigation/Navigation';
-import OptionCard from './../OptionCard/OptionCard'
 import rideImg1 from './../../Images/Frame-1.png'
 import rideImg2 from './../../Images/Frame-2.png'
 import rideImg3 from './../../Images/Frame-3.png'
