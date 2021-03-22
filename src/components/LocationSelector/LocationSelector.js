@@ -7,6 +7,7 @@ import rideImg3 from './../../Images/Frame-3.png'
 import rideImg4 from './../../Images/Frame-4.png'
 import { RidereContext, UserContext } from '../../App';
 import Navigation from '../Navigation/Navigation';
+import Iframe from 'react-iframe';
 
 
 
@@ -80,7 +81,15 @@ const LocationSelector = () => {
                         <input type="submit" id='formCustomBtn' value="Submit"/>
                 </form> }
                 <div className='mapArea'>
+                <Iframe
+                url= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7298.959612373561!2d90.36577279424186!3d23.837090201557118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14a3366b005%3A0x901b07016468944c!2sMirpur%20DOHS%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1616434372332!5m2!1sen!2sbd" 
+                height='90%'
+                width= '90%'
+                styles={{display:'block', alignItems:'center', marginLeft:'10rem'}}
+                allowfullscreen="" 
+                loading="lazy"
 
+                />
                 </div>
             </div>
         </div>

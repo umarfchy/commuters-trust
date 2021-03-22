@@ -37,7 +37,7 @@
 }
 
 .mapArea{
-    background: url(./../../Images/Map.png);
+    /* background: url(./../../Images/Map.png); */
     border-radius: 1rem;
     border: 0.15rem solid lightgray;
     height: 80vh;
